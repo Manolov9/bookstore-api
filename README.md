@@ -79,7 +79,7 @@ Run all tests using Maven:
 mvn test
 
 
-Test Details
+## Test Details
 Books Tests
 Located in books/ package. Tests cover retrieval, creation, update, and deletion of book resources.
 
@@ -98,7 +98,7 @@ Tests that update or delete created resources use @TestMethodOrder(MethodOrderer
 Each test creates its own data in @BeforeEach and cleans up in @AfterEach to avoid side effects.
 
 
-$$ Continuous Integration:
+## Continuous Integration:
 
 name: API Tests CI
 
