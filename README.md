@@ -1,73 +1,76 @@
-Bookstore API Automation Tests
-This project contains automated API tests for the FakeRestAPI focusing on the Books and Authors endpoints. The tests are implemented using RestAssured and JUnit 5, and are configured with Maven for build and dependency management.
+# Bookstore API Automation Tests
 
-Table of Contents
-Project Overview
+This project contains automated API tests for the [FakeRestAPI](https://fakerestapi.azurewebsites.net/) focusing on the **Books** and **Authors** endpoints. The tests are implemented using **RestAssured** and **JUnit 5**, and are configured with **Maven** for build and dependency management.
 
-Technologies Used
+---
 
-Project Structure
+## Table of Contents
 
-Setup Instructions
+- [Project Overview](#project-overview)  
+- [Technologies Used](#technologies-used)  
+- [Project Structure](#project-structure)  
+- [Setup Instructions](#setup-instructions)  
+- [Running Tests](#running-tests)  
+- [Test Details](#test-details)  
+- [Test Ordering](#test-ordering)  
+- [Continuous Integration](#continuous-integration)  
+- [Contributing](#contributing)  
+- [License](#license)
 
-Running Tests
+---
 
-Test Details
+## Project Overview
 
-Test Ordering
-
-Continuous Integration
-
-Contributing
-
-License
-
-Project Overview
 This test suite automates common CRUD operations for the Books and Authors resources exposed by the FakeRestAPI service. It covers:
 
-GET all and by ID
+- GET all and by ID  
+- POST (create)  
+- PUT (update)  
+- DELETE  
 
-POST (create)
+Tests are designed to be clean and isolated, using JUnit lifecycle methods (`@BeforeEach`, `@AfterEach`) to prepare and clean data as needed.
 
-PUT (update)
+---
 
-DELETE
+## Technologies Used
 
-Tests are designed to be clean and isolated, using JUnit lifecycle methods (@BeforeEach, @AfterEach) to prepare and clean data as needed.
+- Java 17+ (recommended)  
+- RestAssured 5.x  
+- JUnit 5 (Jupiter)  
+- Maven 3.8+  
+- Hamcrest for assertions  
 
-Technologies Used
-Java 17+ (recommended)
+---
 
-RestAssured 5.x
+## Project Structure
 
-JUnit 5 (Jupiter)
-
-Maven 3.8+
-
-Hamcrest for assertions
-
-Project Structure
-bash
-Copy
-Edit
 src/test/java/
- ├─ authors/            # Tests for Authors endpoint
- ├─ books/              # Tests for Books endpoint
- └─ config/             # Common test configuration (e.g., base URI)
-Setup Instructions
-Prerequisites
+├─ authors/ # Tests for Authors endpoint
+├─ books/ # Tests for Books endpoint
+└─ config/ # Common test configuration (e.g., base URI)
+...
 
-Java 17 or higher installed and configured in your PATH.
+## Setup Instructions
 
-Maven installed and configured in your PATH.
+1. **Prerequisites**  
+   - Java 17 or higher installed and configured in your `PATH`.  
+   - Maven installed and configured in your `PATH`.
 
-Clone the repository
+2. **Clone the repository**  
+   ```bash
+   git clone https://github.com/yourusername/bookstore-api-tests.git
+   cd bookstore-api-tests
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/bookstore-api-tests.git
-cd bookstore-api-tests
+## Setup Instructions
+
+1. **Prerequisites**  
+   - Java 17 or higher installed and configured in your `PATH`.  
+   - Maven installed and configured in your `PATH`.
+
+2. **Clone the repository**  
+   ```bash
+   git clone https://github.com/yourusername/bookstore-api-tests.git
+   cd bookstore-api-tests
 Build the project and download dependencies
 
 bash
