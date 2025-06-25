@@ -80,38 +80,34 @@ mvn test
 
 
 ## Test Details
-Books Tests
+## Books Tests
 Located in books/ package. Tests cover retrieval, creation, update, and deletion of book resources.
 
-Authors Tests
+## Authors Tests
 Located in authors/ package. Similar coverage for authors resources.
-
 Tests use JUnit 5 lifecycle annotations (@BeforeEach, @AfterEach) to create and clean test data for isolation.
-
 Tests requiring specific execution order are annotated with JUnit 5's @TestMethodOrder and @Order.
 
-Test Ordering
+## Test Ordering
 To ensure data consistency and test independence, some tests require ordered execution:
-
-Tests that update or delete created resources use @TestMethodOrder(MethodOrderer.OrderAnnotation.class) with explicit @Order annotations.
-
-Each test creates its own data in @BeforeEach and cleans up in @AfterEach to avoid side effects.
+-Tests that update or delete created resources use @TestMethodOrder(MethodOrderer.OrderAnnotation.class) with explicit @Order annotations.
+-Each test creates its own data in @BeforeEach and cleans up in @AfterEach to avoid side effects.
 
 
 ## Continuous Integration:
 
 name: API Tests CI
 
-on: [push, pull_request]
+-on: [push, pull_request]
 
-permissions:
-  checks: write
-  contents: read
+-permissions:
+ - checks: write
+  -contents: read
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
+-jobs:
+ - test:
+   - runs-on: ubuntu-latest
+    -steps:
       - uses: actions/checkout@v3
 
       - name: Set up JDK 11
