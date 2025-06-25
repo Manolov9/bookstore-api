@@ -71,20 +71,13 @@ src/test/java/
    ```bash
    git clone https://github.com/yourusername/bookstore-api-tests.git
    cd bookstore-api-tests
+   
 Build the project and download dependencies
-
-bash
-Copy
-Edit
 mvn clean compile
-Running Tests
-Run all tests using Maven:
 
-bash
-Copy
-Edit
+Run all tests using Maven:
 mvn test
-Alternatively, you can run tests from your favorite IDE that supports JUnit 5.
+
 
 Test Details
 Books Tests
@@ -104,12 +97,8 @@ Tests that update or delete created resources use @TestMethodOrder(MethodOrderer
 
 Each test creates its own data in @BeforeEach and cleans up in @AfterEach to avoid side effects.
 
-Continuous Integration
-This project includes a GitHub Actions workflow to automate testing on every push or pull request:
 
-yaml
-Copy
-Edit
+Continuous Integration
 name: API Tests CI
 
 on: [push, pull_request]
@@ -140,15 +129,6 @@ jobs:
           name: JUnit Report
           path: target/surefire-reports/*.xml
           reporter: java-junit
-This workflow:
-
-Checks out the code
-
-Sets up Java 11 (Temurin distribution)
-
-Builds and runs tests using Maven
-
-Publishes JUnit reports for easy viewing in the GitHub UI
 
 Contributing
 Feel free to fork the project, add more tests for other endpoints, or improve the framework structure. Pull requests are welcome!
