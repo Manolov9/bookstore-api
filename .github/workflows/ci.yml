@@ -2,6 +2,10 @@ name: API Tests CI
 
 on: [push, pull_request]
 
+permissions:
+  checks: write
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
